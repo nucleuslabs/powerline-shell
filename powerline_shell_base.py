@@ -19,13 +19,13 @@ class Powerline:
             'lock': 'RO',
             'network': 'SSH',
             'separator': u'\u25B6',
-            'separator_thin': u'\u276F'
+            'separator_thin': '/'
         },
         'patched': {
             'lock': u'\uE0A2',
             'network': u'\uE0A2',
             'separator': u'\uE0B0',
-            'separator_thin': u'\uE0B1'
+            'separator_thin': '/'
         },
         'flat': {
             'lock': '',
@@ -38,6 +38,7 @@ class Powerline:
     color_templates = {
         'bash': '\\[\\e%s\\]',
         'zsh': '%%{%s%%}',
+        'csh': '%%{\\e%s%%}',
         'bare': '%s',
     }
 
@@ -137,7 +138,7 @@ if __name__ == "__main__":
             help='The characters used to make separators between segments',
             choices=['patched', 'compatible', 'flat'])
     arg_parser.add_argument('--shell', action='store', default='bash',
-            help='Set this to your shell type', choices=['bash', 'zsh', 'bare'])
+            help='Set this to your shell type', choices=['bash', 'zsh', 'csh', 'bare'])
     arg_parser.add_argument('prev_error', nargs='?', type=int, default=0,
             help='Error code returned by the last command')
     args = arg_parser.parse_args()

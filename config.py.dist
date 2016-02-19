@@ -14,13 +14,13 @@ SEGMENTS = [
     'virtual_env',
 
 # Show the current user's username as in ordinary prompts
-    'username',
+    'username_nucleus',
 
 # Show the machine's hostname. Mostly used when ssh-ing into other machines
-    'hostname',
+    'hostname_nucleus',
 
 # Show a padlock when ssh-ing from another machine
-    'ssh',
+#    'ssh',
 
 # Show the current directory. If the path is too long, the middle part is
 # replaced with ellipsis ('...')
@@ -46,7 +46,7 @@ SEGMENTS = [
     'jobs',
 
 # Show the last command's exit code if it was non-zero
-#    'exit_code',
+    'exit_code',
 
 # Shows a '#' if the current user is root, '$' otherwise
 # Also, changes color if the last command exited with a non-zero error code
