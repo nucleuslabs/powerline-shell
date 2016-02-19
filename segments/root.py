@@ -3,6 +3,7 @@ def add_root_segment(powerline):
         'bash': ' \\$ ',
         'zsh': ' %# ',
         'bare': ' $ ',
+        'csh': ' $ ',
     }
     bg = Color.CMD_PASSED_BG
     fg = Color.CMD_PASSED_FG
